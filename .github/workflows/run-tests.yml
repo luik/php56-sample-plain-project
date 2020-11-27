@@ -13,3 +13,6 @@ jobs:
       - run: sudo apt-get install php5.6-igbinary php5.6-mbstring php5.6-mcrypt php5.6-soap php5.6-redis php5.6-intl php5.6-mcrypt php5.6-mysqli php5.6-xml  
       - run: php -v
       - run: php5.6 -v  
+      - run: whereis php
+      - run: whereis php5.6
+  
