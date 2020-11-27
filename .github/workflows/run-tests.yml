@@ -4,5 +4,6 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - run: mysql -uroot -proot -e "CREATE DATABASE dbname;"
+      - run: sudo apt-get install mysql-server
+      - run: sudo mysql -u root -e "SHOW database"
 
