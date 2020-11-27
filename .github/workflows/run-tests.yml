@@ -4,6 +4,5 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt-get install mysql-server
       - run: sudo mysql -u root -e "SHOW database"
 
