@@ -4,5 +4,5 @@ jobs:
   tests:
     runs-on: ubuntu-20.04
     steps:
+      - run: sudo systemctl start mysql.service
       - run: sudo mysql -u root -proot -e "SHOW databases"
-
