@@ -4,5 +4,5 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo mysql -u root -e "SHOW database"
+      - run: sudo mysql -u root -prppt -e "SHOW databases"
 
