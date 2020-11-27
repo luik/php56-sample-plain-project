@@ -14,8 +14,8 @@ jobs:
       - run: sudo rm -f /usr/bin/php && sudo ln -s /usr/bin/php5.6 /usr/bin/php
       - run: curl -O -L https://github.com/composer/composer/releases/download/1.6.5/composer.phar && sudo mv composer.phar /usr/bin/composer && sudo chmod +x /usr/bin/composer
       - run: mysql -u root -proot -e 'CREATE DATABASE test_database'
-      - run: mysql -u root -proot test_database < ./db-schema/schema.sql
       - uses: actions/checkout@v2
+      - run: mysql -u root -proot test_database < ./db-schema/schema.sql
       - run: composer install
       - run: ./vendor/bin/phpunit --testdox tests/*
   
