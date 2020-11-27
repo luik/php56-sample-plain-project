@@ -1,3 +1,5 @@
+# ref: https://github.com/actions/virtual-environments/blob/ubuntu20/20201116.1/images/linux/Ubuntu2004-README.md
+
 name: run-tests
 on: [push]
 jobs:
@@ -6,3 +8,8 @@ jobs:
     steps:
       - run: sudo systemctl start mysql.service
       - run: sudo mysql -u root -proot -e "SHOW databases"
+      - run: sudo add-apt-repository ppa:ondrej/php
+      - run: sudo apt-get update && sudo apt-get install -y php5.6
+      - run: sudo apt-get install php5.6-igbinary php5.6-mbstring php5.6-mcrypt php5.6-soap php5.6-redis php5.6-intl php5.6-mcrypt php5.6-mysqli php5.6-xml  
+      - run: php -v
+      - run: php5.6 -v  
