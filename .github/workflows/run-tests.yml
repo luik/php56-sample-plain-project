@@ -1,4 +1,5 @@
 # ref: https://github.com/actions/virtual-environments/blob/ubuntu20/20201116.1/images/linux/Ubuntu2004-README.md
+# ref: https://phpunit.de/getting-started/phpunit-5.html
 
 name: run-tests
 on: [push]
@@ -11,6 +12,6 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install -y php5.6
       - run: sudo apt-get install php5.6-igbinary php5.6-mbstring php5.6-mcrypt php5.6-soap php5.6-redis php5.6-intl php5.6-mcrypt php5.6-mysqli php5.6-xml  
       - run: sudo rm -f /usr/bin/php && sudo ln -s /usr/bin/php5.6 /usr/bin/php  
-      - run: sudo mysql -u root -proot < ./db-schema/schema.sql
+      - run: mysql -u root -proot < ./db-schema/schema.sql
       
   
