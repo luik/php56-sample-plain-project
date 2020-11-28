@@ -11,7 +11,7 @@ final class UserManagerTest extends TestCase
 	$userManager = new UserManager();
 	$userManager->recordPurchase(10, 11, 12);
 
-	$dbConnection = mysqli_connect($CFG->dbhost, $CFG->dbname, $CFG->dbuser, $CFG->dbpass);
+	$dbConnection = mysqli_connect($CFG->dbhost, $CFG->dbuser, $CFG->dbpass, $CFG->dbname);
 	$result = $mysqli_query($dbConnection, 'SELECT * FROM purchase');
 	$row = $result->fetch_assoc();
 	$this->assertEquals(10, $row['item_code']);

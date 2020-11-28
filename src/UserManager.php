@@ -14,7 +14,7 @@ class UserManager {
 	private function ensureConnection() {
 		global $CFG;
 		if(!isset($this->dbConnection)) {
-			$this->dbConnection = mysqli_connect($CFG->dbhost, $CFG->dbname, $CFG->dbuser, $CFG->dbpass);
+			$this->dbConnection = mysqli_connect($CFG->dbhost, $CFG->dbuser, $CFG->dbpass, $CFG->dbname);
 		}
 	}
 }
