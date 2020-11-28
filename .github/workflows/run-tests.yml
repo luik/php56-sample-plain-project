@@ -16,7 +16,7 @@ jobs:
       - run: mysql -u root -proot -e 'CREATE DATABASE test_database'
       - uses: actions/checkout@v2
       - run: mysql -u root -proot test_database < ./db-schema/schema.sql
-      - run: composer install
       - run: cp .github/workflows/config-template.php config.php 
+      - run: composer install
       - run: ./vendor/bin/phpunit --debug tests/*
   
