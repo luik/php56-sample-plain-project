@@ -18,5 +18,5 @@ jobs:
       - run: mysql -u root -proot test_database < ./db-schema/schema.sql
       - run: cp .github/workflows/config-template.php config.php 
       - run: composer install
-      - run: ./vendor/bin/phpunit --debug tests/*
+      - run: ./vendor/bin/phpunit --debug tests
   
