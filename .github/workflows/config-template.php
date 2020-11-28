@@ -10,8 +10,8 @@ $CFG = new stdClass();
 
 $CFG->dbhost    = '127.0.0.1';
 $CFG->dbname    = 'test_database';
-$CFG->dbuser    = 'root';
-$CFG->dbpass    = 'root';
+$CFG->dbuser    = 'user';
+$CFG->dbpass    = 'pass';
 
 
 
