@@ -1,7 +1,8 @@
 {
     "autoload": {
         "classmap": [
-            "src/"
+            "src/",
+	    "config.php"
         ]
     },
     "require-dev": {
